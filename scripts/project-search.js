@@ -1,19 +1,22 @@
 const project_list = [
-    "boxedup games",
-    "portfolio",
-    "localchat"
+    "Boxedup Games",
+    "Portfolio Website",
+    "Localchat"
 ]
 
 function search(input, return_count=5){
+    if (input.length == 0){ return []; }
 
     input = input.toLowerCase();
 
     let results_map = {};
     for (let i = 0; i < project_list.length; i++){
-        let dist = edit_distance(project_list[i],input)
+
+        let current_proj = project_list[i].toLowerCase()
+        let dist = edit_distance(current_proj,input)
 
         //Add a penalty if the string does not contain the input string
-        if (project_list[i].indexOf(input) == -1){ dist += 10; }
+        if (current_proj.indexOf(input) == -1){ dist += 10; }
         if (results_map[dist] === undefined){ results_map[dist] = []; }
         results_map[dist].push(project_list[i])
     }

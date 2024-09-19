@@ -4,8 +4,7 @@ const project_list = [
     "localchat"
 ]
 
-function search(input){
-    const RETURN_SIZE = 5;
+function search(input, return_count=5){
 
     input = input.toLowerCase();
 
@@ -22,10 +21,10 @@ function search(input){
     let results_list = []
     for (key in results_map){
         results_list = results_list.concat(results_map[key]);
-        if (results_list.length > RETURN_SIZE){ break; }
+        if (results_list.length > return_count){ break; }
     }
 
-    return results_list.slice(0,Math.min(results_list.length,RETURN_SIZE-1));
+    return results_list.slice(0,Math.min(results_list.length,return_count-1));
 }
 
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio Website">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Samuel Hagen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Hagen Portfolio</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/nav_styles.css">
+    <script src="./scripts/project-search.js"></script>
+    </head>
+    <body>
+    <div>
+    <h1 class="center" style="margin-bottom: 0">Samuel Hagen</h1>
+    <p class="center" style="margin-top: 5px">Programmer</p>
+    </div>
+    <div id="nav"></div>
+    <script src="./scripts/navbuilder.js"></script>
+    <div class="content">
+        <h1>About Me</h1>
+        <p>My name is Samuel Hagen, I have been programming for <span id="years-experience"></span> years. I started programming in 2018 in python, making several little games to challenge myself and expand my skillset. In 2021, I took AP Computer Science Principles which introduced me to JavaScript and several key concepts of computer science. The following year, I enrolled for AP Computer Science A where we learned Java. It was that year that I decided to major in computer science in college.</p>
+        <script>
+            document.getElementById("years-experience").innerText = new Date().getFullYear() - 2018
+        </script>
+
+        <h1>Education</h1>
+        <p>
+        <b>Major:</b> B.S. Computer Science (ABET accredited)<br>
+        <b>Minor:</b> Mobile Development<br>
+        <b>GPA:</b> 3.7 in major, 3.3 overall<br>
+        <b>Courses:</b> Java 1 and 2, Data Structures, Parallel Computing, Data Communication, Web Programming Technologies
+        </p>
+
+        <h1>Technical Skills</h1>
+
+        <p><b>Programming Languages:</b> Java, JavaScript, HTML/CSS, Scala, Swift, Python, C
+        <b>Tools/Platforms:</b> Linux/Bash, Git, Junit, Mathematica, Swing, Discord.js, Flask</p>
+
+    </div>
+    </body>
+</html>

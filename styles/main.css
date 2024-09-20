@@ -1,3 +1,7 @@
+#head {
+    text-align: center;
+}
+
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -23,6 +27,7 @@ p {
 }
 
 .project-title { margin-top: 0; }
+
 
 /* Image display for larger devices */
 .image-left { display: none; }

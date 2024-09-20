@@ -28,7 +28,7 @@ function createSearchResults(items){
     SEARCH_RESULTS.style.display = "block";
 
     for (let i in items){
-        SEARCH_RESULTS.appendChild(create_navbar_btn(items[i],"./projects.html#"+items[i]))
+        SEARCH_RESULTS.appendChild(create_navbar_btn(items[i],"./projects.html#"+items[i].toLowerCase().replace(" ","-")))
     }
 
     return SEARCH_RESULTS;
@@ -63,8 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("search-results").style.display = "block"
         }
     };
-    SEARCH_BAR.onblur = (e) => { 
-        document.getElementById("search-results").style.display = "none"
+    SEARCH_BAR.onblur = (e) => {
+        setTimeout(() => {
+            document.getElementById("search-results").style.display = "none"
+        },20)
+        //document.getElementById("search-results").style.display = "none"
     };
 
     //Add to nav bar

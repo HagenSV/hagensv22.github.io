@@ -1,9 +1,21 @@
 #head {
     text-align: center;
+    animation: fadein 2s;
+
 }
 
 #head p {
     text-indent: 0;
+}
+
+@keyframes fadein {
+    from {
+        transform: translate(0, 20px);
+        color: #ffffff00
+    }
+    to {
+        color: #000000
+    }
 }
 
 body {

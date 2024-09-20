@@ -1,15 +1,36 @@
 #head {
+    background-image: url("../images/head-background.webp");
+    height: fit-content;
+    overflow: hidden;
     text-align: center;
+    color: #ffffff;
+
+}
+
+#head h1 {
+    animation: fadein 2s;
 }
 
 #head p {
     text-indent: 0;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        transform: translate(0, 20px);
+        color: #ffffff00
+    }
+    to {
+        color: #ffffff
+    }
 }
 
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     /*background-color: hsl(120, 100%, 80%); /* */
+    background-color: #d8ecfe;
 }
 
 h1 {

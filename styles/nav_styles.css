@@ -3,15 +3,21 @@ Nav bar adapted from w3 schools tutorial
 https://www.w3schools.com/css/css_navbar_horizontal.asp
 */
 
+:root {
+    --background-color: #154063;
+    --text-color: white;
+    --hover-color: #43688b
+}
+
 #nav {
     height: fit-content;
     position: -webkit-sticky; /* Safari Support */
     position: sticky;
     top: 0;
     width: 100%;
-    border-top: 0.5px solid black;
+    border-top: 2px solid black;
     border-bottom: 0.5px solid black;
-    background-color: white;
+    background-color: var(--background-color);
 }
 
 #nav ul {
@@ -27,7 +33,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 
 #nav a {
     display: inline-block;
-    color: black;
+    color: var(--text-color);
     font-weight: bolder;
     text-align: center;
     padding: 10px;
@@ -35,7 +41,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 }
 
 #nav li a:hover, #nav .dropdown:hover .dropbtn {
-    background-color: #00b300;
+    background-color: var(--hover-color);
 }
 
 #nav li.dropdown {
@@ -60,7 +66,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 }
 
 #nav .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #e1e1e1;
 }
 
 #nav .dropdown:hover .dropdown-content {

@@ -1,11 +1,19 @@
 #head {
+    background-image: url("../images/head-background.webp");
+    height: fit-content;
+    overflow: hidden;
     text-align: center;
-    animation: fadein 2s;
+    color: #ffffff;
 
+}
+
+#head h1 {
+    animation: fadein 2s;
 }
 
 #head p {
     text-indent: 0;
+    animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -14,7 +22,7 @@
         color: #ffffff00
     }
     to {
-        color: #000000
+        color: #ffffff
     }
 }
 

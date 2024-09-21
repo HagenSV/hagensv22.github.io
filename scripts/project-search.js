@@ -2,7 +2,8 @@ const project_list = [
     "Boxedup Games",
     "Portfolio Website",
     "Localchat",
-    "AstroMiner"
+    "AstroMiner",
+    "Schooled"
 ]
 
 function search(input, return_count=5){

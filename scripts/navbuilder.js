@@ -38,8 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const nav = document.getElementById("nav")
 
     //Fill nav bar with links
-    const nav_list_container = document.createElement("div")
-    nav_list_container.classList.add("menu")
+    const menu_btn = document.createElement("span")
+    menu_btn.id = "menu"
+    menu_btn.innerText = "menu"
+    menu_btn.classList.add("material-icons")
+    nav.appendChild(menu_btn)
 
     const nav_list = document.createElement("ul");
     for (const ITEM_NAME in NAVBAR_MENU) {
@@ -69,8 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         nav_list.appendChild(BTN);
     }
-    nav_list_container.appendChild(nav_list);
-    nav.appendChild(nav_list_container);
+    nav.appendChild(nav_list);
+
+
+    menu_btn.onclick = (e) => {
+        nav_list.style.display = "block"
+    }
 
 
     // Create container for search functions

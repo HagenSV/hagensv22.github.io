@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const nav = document.getElementById("nav")
 
     //Fill nav bar with links
+    const nav_list_container = document.createElement("div")
+    nav_list_container.classList.add("menu")
+
     const nav_list = document.createElement("ul");
     for (const ITEM_NAME in NAVBAR_MENU) {
     
@@ -66,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         nav_list.appendChild(BTN);
     }
-    nav.appendChild(nav_list);
+    nav_list_container.appendChild(nav_list);
+    nav.appendChild(nav_list_container);
 
 
     // Create container for search functions

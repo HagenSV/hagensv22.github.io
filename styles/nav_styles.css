@@ -36,7 +36,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
     width: 25%;
     background-color: var(--dropdown-color);
     position: absolute;
-    height: fit-content;
+    height: 100vh;
     z-index: 1;
 }
   

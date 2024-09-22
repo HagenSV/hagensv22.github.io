@@ -63,11 +63,12 @@ p {
 
 /* Image display for mobile devices */
 .image-mobile {
+    display: block;
     margin: auto;
     text-align: center;
-    width: 300px;
+    width: 400px;
     height: 300px;
-    border: 0.5px solid black;
+    border: 1px solid black;
 }
 
 /* Large screen formatting */
@@ -78,9 +79,9 @@ p {
         float: left;
         text-align: center;
         margin: 0 20px 0 0;
-        width: 300px;
+        width: 400px;
         height: 300px;
-        border: 0.5px solid black;
+        border: 1px solid black;
     }
 
     .image-right {
@@ -88,9 +89,9 @@ p {
         float: right;
         text-align: center;
         margin: 0 0 0 20px;
-        width: 300px;
+        width: 400px;
         height: 300px;
-        border: 0.5px solid black
+        border: 1px solid black
     }
 
     .image-mobile {

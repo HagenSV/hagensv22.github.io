@@ -22,9 +22,16 @@
     <script src="./scripts/navbuilder.js"></script>
     <div class="content">
         <h1>About Me</h1>
-        <p>My name is Samuel Hagen, I have been programming for <span id="years-experience"></span> years. I started programming in 2018 in python, making several little games to challenge myself and expand my skillset. In 2021, I took AP Computer Science Principles which introduced me to JavaScript and several key concepts of computer science. The following year, I enrolled for AP Computer Science A where we learned Java. It was that year that I decided to major in computer science in college.</p>
+        <p class="no-indent"><b>TLDR for recruiters:</b> <span name="years-experience"></span> years of experience. Started in python, Took AP Comp Sci Principles, learned JavaScript, scored a 4 on the AP Exam, took AP Comp Sci A, learned Java and scored a 5 on the AP Exam. I spend much of my free time programming</p>
+        
+        <p>My name is Samuel Hagen, I have been programming for <span name="years-experience"></span> years. I started programming in 2018 with python, making several little games to challenge myself and expand my skillset. These games included, but were not limited to, Dreidel, BlackJack, and a text-based survival game inspired by Minecraft. Sadly, most of these projects have been lost, and many others were never completed due to burn out from my lack of technical skills. I often would create bugs that were difficult to solve. Despite my failures, I always kept on coding.
+             
+        <p>In 2021, I took AP Computer Science Principles which introduced me to several key concepts of computer science. Concepts included: binary, data compression, big O notation, fault tolerance and <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-course-at-a-glance.pdf">more</a>. We programmed in JavaScript on code.org's app lab. In the spring, I scored a 4 on the AP exam</p>
+             
+        <p>The following year, I enrolled in AP Computer Science A where we learned Java. It was that year that I decided to major in computer science in college.</p>
         <script>
-            document.getElementById("years-experience").innerText = new Date().getFullYear() - 2018
+            let elements = document.getElementsByName("years-experience")
+            elements.forEach( (e) => { e.innerText = new Date().getFullYear() - 2018 } )
         </script>
 
         <h1>Education</h1>

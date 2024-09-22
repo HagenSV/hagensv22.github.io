@@ -37,6 +37,38 @@ function createSearchResults(items){
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.getElementById("nav")
 
+    //Fill nav bar with links
+    const nav_list = document.createElement("ul");
+    for (const ITEM_NAME in NAVBAR_MENU) {
+    
+        const BTN = document.createElement("li");
+
+        //If the key content is a string, create a button
+        if (typeof NAVBAR_MENU[ITEM_NAME] === 'string') {
+            BTN.appendChild(create_navbar_btn(ITEM_NAME, NAVBAR_MENU[ITEM_NAME]));
+      
+        //Create dropdown list
+        } else {
+
+            BTN.classList.add("dropdown");
+            const BTN_LINK = document.createElement("span");
+            BTN_LINK.innerText = ITEM_NAME;
+            BTN_LINK.classList.add("dropbtn");
+            const CONTENT = document.createElement("div");
+            CONTENT.classList.add("dropdown-content");
+
+            for (const DROPDOWN_ITEM in NAVBAR_MENU[ITEM_NAME]) {
+                DROPDOWN_BTN = create_navbar_btn(DROPDOWN_ITEM, NAVBAR_MENU[ITEM_NAME][DROPDOWN_ITEM]);
+                CONTENT.appendChild(DROPDOWN_BTN);
+            }
+            BTN.appendChild(BTN_LINK);
+            BTN.appendChild(CONTENT);
+        }
+        nav_list.appendChild(BTN);
+    }
+    nav.appendChild(nav_list);
+
+
     // Create container for search functions
     const SEARCH_CONTAINER = document.createElement("div")
     SEARCH_CONTAINER.id ="search";
@@ -72,35 +104,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Add to nav bar
     nav.appendChild(SEARCH_CONTAINER);
-
-    //Fill nav bar with links
-    const nav_list = document.createElement("ul");
-    for (const ITEM_NAME in NAVBAR_MENU) {
-    
-        const BTN = document.createElement("li");
-
-        //If the key content is a string, create a button
-        if (typeof NAVBAR_MENU[ITEM_NAME] === 'string') {
-            BTN.appendChild(create_navbar_btn(ITEM_NAME, NAVBAR_MENU[ITEM_NAME]));
-      
-        //Create dropdown list
-        } else {
-
-            BTN.classList.add("dropdown");
-            const BTN_LINK = document.createElement("span");
-            BTN_LINK.innerText = ITEM_NAME;
-            BTN_LINK.classList.add("dropbtn");
-            const CONTENT = document.createElement("div");
-            CONTENT.classList.add("dropdown-content");
-
-            for (const DROPDOWN_ITEM in NAVBAR_MENU[ITEM_NAME]) {
-                DROPDOWN_BTN = create_navbar_btn(DROPDOWN_ITEM, NAVBAR_MENU[ITEM_NAME][DROPDOWN_ITEM]);
-                CONTENT.appendChild(DROPDOWN_BTN);
-            }
-            BTN.appendChild(BTN_LINK);
-            BTN.appendChild(CONTENT);
-        }
-        nav_list.appendChild(BTN);
-    }
-    nav.appendChild(nav_list);
 });

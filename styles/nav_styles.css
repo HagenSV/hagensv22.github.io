@@ -103,6 +103,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 
 #nav #search:focus-within #search-results {
     display: block;
+}
 
 @media screen and (min-width: 600px) {
 

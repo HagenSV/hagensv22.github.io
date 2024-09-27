@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QH8VCJ0N0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8QH8VCJ0N0');
+    </script>
     <meta charset="UTF-8">
     <meta name="description" content="Portfolio Website">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Samuel Hagen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects - SVH</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/nav_styles.css">
     <script src="./scripts/project-search.js"></script>
@@ -15,34 +24,60 @@
     <body>
     <div id="head">
     <h1>Projects</h1>
-    <p style="visibility: hidden;">My Projects</p>
+    <p style="visibility: hidden;">All Projects</p>
     </div>
     <div id="nav"></div>
     <script src="./scripts/navbuilder.js"></script>
 <div class="content">
 
     <div class="project" id="portfolio-website">
-        <div class="image-right"> <p>Image goes here</p> </div>
-        <h1>Portfolio Website</h1>
-        <p class="no-indent"><b>Languages/Technologies:</b> HTML, CSS, JS</p>
-        <p>The very website you are browsing right now. The website is written by hand without using generators or libraries to reduce bloat (improving loading speeds) and to familiarize myself with the basic web development tools. This project uses responsive web design in an effort to provide the best experince across all devices.</p>
-        <div class="image-mobile"> <p>Image goes here</p> </div>
+        <h1>Portfolio Website (2024)</h1>
+        <p class="no-indent"><b>Languages & Technologies:</b> HTML/CSS, JavaScript</p>
+        <p>This website is written by hand without using generators or libraries so that I can familiarize myself with the basic web development tools. This project uses css media queries to provide the best experience across all devices.</p>
+        <h4>Accomplishments</h4>
+        <ul>
+        <li>Successfully implemented a search function using the wagner fisher approach for calculating Levenshtein distance of two strings</li>
+        </ul>
     </div>
 
     <div class="project" id="boxedup-games">
-        <div class="image-left"> <p>Image goes here</p> </div>
-        <h1>BoxedUp Games</h1>
-        <p class="no-indent"><b>Languages/Technologies:</b> Java (Swing), HTML, CSS, JS</p>
+        <img class="image-right" src="./images/projects/boxedup-games-menu.png" alt="Main Menu for BoxedUp Games's Server App" style="width:400px;height:100%;">
+
+        <h1>BoxedUp Games (2024)</h1>
+        <p class="no-indent"><b>Languages & Technologies:</b> Java (Swing, Http), HTML/CSS, JavaScript</p>
         <p>BoxedUp Games is a collection of web browser party games similar to jackbox. The server is hosted locally on a device and players can join the game by typing the host's ip address in their browser address or scanning a generated QR code.</p>
-        <div class="image-mobile"> <p>Image goes here</p> </div>
+        <h4>Accomplishments</h4>
+        <ul>
+            <li>Created an HTTP Server using Java's http library</li>
+            <li>Used asynchronous XMLHttpRequests in JavaScript to communicate with the game server</li>
+        </ul>
+        <img class="image-mobile" src="./images/projects/boxedup-games-menu.png" alt="Main menu for BoxedUp Games's server app" style="width:500px;height:100%">
     </div>
 
     <div class="project" id="localchat">
-            <div class="image-right"> <p>Image goes here</p> </div>
-            <h1>LocalChat</h1>
-            <p class="no-indent"><b>Languages/Technologies:</b> Java (Sockets)</p>
+            <!--div class="image-right"> <p>Image goes here</p> </div-->
+            <h1>LocalChat (2023)</h1>
+            <p class="no-indent"><b>Languages & Technologies:</b> Java (Sockets)</p>
             <p>A simple chat app for messaging other people on the local network. This project utilizes Java's built-in socket libraries.</p>
-            <div class="image-mobile"> <p>Image goes here</p> </div>
+            <!--div class="image-mobile"> <p>Image goes here</p> </div-->
+    </div>
+    <div class="project" id="astrominer">
+        <!--div class="image-left"> <p>Image goes here</p> </div-->
+        <h1>AstroMiner (2022)</h1>
+        <p class="no-indent"><b>Languages & Technologies:</b> Java (Swing)</p>
+        <p>A basic game where you fly around in space mining asteroids. This project was a group project in AP Computer Science A.</p>
+        <h4>Accomplishments</h4>
+        <ul>
+        <li>Team Leader: divided tasks between myself and teammate</li>
+        <li>Primary developer for game logic</li>
+        <li>Taught myself Java's swing libraries</li>
+        </ul>
+        <!--div class="image-mobile"> <p>Image goes here</p> </div-->
+    </div>
+    <div class="project" id="schooled">
+        <h1>Schooled (2022)</h1>
+        <p class="no-indent"><b>Languages & Technologies:</b> JavaScript, Discord.js, HTML/CSS</p>
+        <p>When I was in high school, my primary mode of communication with my friends was Discord. The problem? Discord was blocked on the school wifi, and my phone plan didn't come with much data (my parents were covering it so I couldn't complain). My solution was to creat a website and discord bot to connect to my friends' discord server and relay messages between discord and my website. The project was severely limited in scope, the bot only interacted with one channel. From this project I learned that the network had human moderators, because my website kept getting blocked. Conveniently, the website was hosted on repl.it back when they had more available for free, and simply changing the project name would give the website a new url, circumventing the network restrictions.</p>
     </div>
 </div>
     </body>

@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QH8VCJ0N0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8QH8VCJ0N0');
+    </script>
     <meta charset="UTF-8">
-    <meta name="description" content="Portfolio Website">
+    <meta name="description" content="Samuel Hagen's Portfolio Website">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Samuel Hagen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - SVH</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/nav_styles.css">
     <script src="./scripts/project-search.js"></script>
@@ -15,7 +24,7 @@
     <body>
     <div>
     <div id="head">
-    <h1>Samuel Hagen</h1>
+    <h1>Samuel V. Hagen</h1>
     <p>Programmer</p>
     </div>
     </div>
@@ -23,9 +32,12 @@
     <script src="./scripts/navbuilder.js"></script>
     <div class="content">
         <h1>About Me</h1>
-        <p>My name is Samuel Hagen, I have been programming for <span id="years-experience"></span> years. I started programming in 2018 in python, making several little games to challenge myself and expand my skillset. In 2021, I took AP Computer Science Principles which introduced me to JavaScript and several key concepts of computer science. The following year, I enrolled for AP Computer Science A where we learned Java. It was that year that I decided to major in computer science in college.</p>
+        <p>My name is Samuel Hagen. I started programming with python in 8th grade, mostly teaching myself. Then, as a Junior in high school, I learned JavaScript and several key concepts of computer science in AP Computer Science Principles. I took AP Computer Science A the following year, where I learned Java and decided to pursue a career in computer science. <a class="mobile-only" href="index.html#my-story">Click here for the full story.</a></p>
+        
+        <!--p>My name is Samuel Hagen, I have been programming for <span name="years-experience"></span> years.</p-->
         <script>
-            document.getElementById("years-experience").innerText = new Date().getFullYear() - 2018
+            let elements = document.getElementsByName("years-experience")
+            elements.forEach( (e) => { e.innerText = new Date().getFullYear() - 2018 } )
         </script>
 
         <h1>Education</h1>
@@ -41,6 +53,11 @@
         <p class="no-indent"><b>Programming Languages:</b> Java, JavaScript, HTML/CSS, Scala, Swift, Python, C<br>
         <b>Tools/Platforms:</b> Linux/Bash, Git, Junit, Mathematica, Swing, Discord.js, Flask</p>
 
+        <h1 id="my-story">My Story</h1>
+        <p>My first experience with programming was in 7th grade. It was a required, quarter long class that I only vaguely remember as nothing stood out to me. The next year, I had to take another quarter long programming class slightly more advanced than the previous one. In this class, we programmed in Python and on the Raspberry Pi. The last program we made in that class was a text-based game of hangman, largely copied from the teacher's code on screen. However, something went wrong and my copy of the code wouldn't run. The quarter ended without me being able to fix it, but the problem stuck with me. That spring, I decided to revisit the problem but first I had to teach myself python. I was never able to figure out the issue, but took interest to programming and made several little games to challenge myself and expand my skillset. These games included, but were not limited to, Dreidel, BlackJack, and a survival game inspired by Minecraft, all of which were text-based. Sadly, most of these projects have been lost, and many others were never completed due to burn out from my lack of technical skills, but despite my failures, I always continued coding.
+        </p>
+             
+        <p>In 2021, I took AP Computer Science Principles which introduced me to several <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-course-at-a-glance.pdf">key concepts of computer science</a>. Concepts included: binary, data compression, big O notation, fault tolerance and more. We programmed in JavaScript on code.org's app lab. In the spring, I scored a 4 on the AP exam. The following year, I enrolled in AP Computer Science A where we learned Java. It was that year that I decided to major in computer science in college. At the end of the year, our project was to make a platformer or another program which would sufficiently demonstrate our proficienty in Java. My partner and I decided to make a game of a different style, where the player must go around mining asteroids and selling the materials for money to upgrade their ships. Unfortunately, we ran out of time and didn't have the opportunity to add move advanced features such as enemies, but the project still met the requirements.</p>
     </div>
     </body>
 </html>

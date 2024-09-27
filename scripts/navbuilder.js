@@ -25,7 +25,6 @@ function createSearchResults(items){
     const SEARCH_RESULTS = document.createElement("div");
     SEARCH_RESULTS.classList.add("dropdown-content");
     SEARCH_RESULTS.id = "search-results";
-    SEARCH_RESULTS.style.display = "block";
 
     for (let i in items){
         SEARCH_RESULTS.appendChild(create_navbar_btn(items[i],"./projects.html#"+items[i].toLowerCase().replace(" ","-")))
@@ -76,14 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nav_list.appendChild(BTN);
     }
     nav_menu.appendChild(nav_list);
-
     nav.appendChild(nav_menu);
-
-
-    // menu_btn.onclick = (e) => {
-    //     nav_list.style.display = "block"
-    // }
-
 
     // Create container for search functions
     const SEARCH_CONTAINER = document.createElement("div")
@@ -105,17 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let results = search(SEARCH_BAR.value)
         document.getElementById("search-results").remove();
         SEARCH_CONTAINER.appendChild(createSearchResults(results));
-    };
-    SEARCH_BAR.onfocus = (e) => { 
-        if (SEARCH_BAR.value.length != 0){
-            document.getElementById("search-results").style.display = "block"
-        }
-    };
-    SEARCH_BAR.onblur = (e) => {
-        setTimeout(() => {
-            document.getElementById("search-results").style.display = "none"
-        },20)
-        //document.getElementById("search-results").style.display = "none"
     };
 
     //Add to nav bar

@@ -25,7 +25,6 @@ function createSearchResults(items){
     const SEARCH_RESULTS = document.createElement("div");
     SEARCH_RESULTS.classList.add("dropdown-content");
     SEARCH_RESULTS.id = "search-results";
-    SEARCH_RESULTS.style.display = "block";
 
     for (let i in items){
         SEARCH_RESULTS.appendChild(create_navbar_btn(items[i],"./projects.html#"+items[i].toLowerCase().replace(" ","-")))
@@ -36,42 +35,6 @@ function createSearchResults(items){
 
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.getElementById("nav")
-
-    // Create container for search functions
-    const SEARCH_CONTAINER = document.createElement("div")
-    SEARCH_CONTAINER.id ="search";
-
-    //Create search bar
-    const SEARCH_BAR = document.createElement("input");
-    SEARCH_BAR.type = "text";
-    SEARCH_BAR.placeholder = "search";
-    SEARCH_BAR.autocomplete = "off";
-    SEARCH_BAR.id = "search-input";
-    SEARCH_CONTAINER.appendChild(SEARCH_BAR)
-
-    //Create container for search results
-    SEARCH_CONTAINER.appendChild(createSearchResults([]));
-
-    //Search bar event listeners
-    SEARCH_BAR.oninput = (e) => {
-        let results = search(SEARCH_BAR.value)
-        document.getElementById("search-results").remove();
-        SEARCH_CONTAINER.appendChild(createSearchResults(results));
-    };
-    SEARCH_BAR.onfocus = (e) => { 
-        if (SEARCH_BAR.value.length != 0){
-            document.getElementById("search-results").style.display = "block"
-        }
-    };
-    SEARCH_BAR.onblur = (e) => {
-        setTimeout(() => {
-            document.getElementById("search-results").style.display = "none"
-        },20)
-        //document.getElementById("search-results").style.display = "none"
-    };
-
-    //Add to nav bar
-    nav.appendChild(SEARCH_CONTAINER);
 
     //Fill nav bar with links
     const nav_list = document.createElement("ul");
@@ -103,4 +66,30 @@ document.addEventListener("DOMContentLoaded", function () {
         nav_list.appendChild(BTN);
     }
     nav.appendChild(nav_list);
+
+    // Create container for search functions
+    const SEARCH_CONTAINER = document.createElement("div")
+    SEARCH_CONTAINER.id ="search";
+
+    //Create search bar
+    const SEARCH_BAR = document.createElement("input");
+    SEARCH_BAR.type = "text";
+    SEARCH_BAR.placeholder = "search";
+    SEARCH_BAR.autocomplete = "off";
+    SEARCH_BAR.id = "search-input";
+    SEARCH_CONTAINER.appendChild(SEARCH_BAR)
+
+    //Create container for search results
+    SEARCH_CONTAINER.appendChild(createSearchResults([]));
+
+    //Search bar event listeners
+    SEARCH_BAR.oninput = (e) => {
+        let results = search(SEARCH_BAR.value)
+        document.getElementById("search-results").remove();
+        SEARCH_CONTAINER.appendChild(createSearchResults(results));
+    };
+
+    //Add to nav bar
+    nav.appendChild(SEARCH_CONTAINER);
+
 });

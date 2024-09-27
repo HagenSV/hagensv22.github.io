@@ -23,9 +23,17 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 }
 
 #nav #menu {
-    color: var(--text-color);
     display: inline-block;
     padding: 10px;
+}
+
+#nav #menu a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#nav #nav-menu:focus-within ul {
+    display: block;
 }
 
 #nav ul {
@@ -81,8 +89,12 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 }
 
 #nav #search {
-    padding: 10px;
+    display: block;
+    position: absolute;
     float: right;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
 }
 
 @media screen and (min-width: 600px) {
@@ -120,14 +132,5 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
         text-align: center;
         padding: 10px;
         text-decoration: none;
-    }
-
-    #nav #search {
-        display: block;
-        position: absolute;
-        float: right;
-        top: 50%;
-        right: 10px;
-        transform: translate(0, -50%);
     }
 }

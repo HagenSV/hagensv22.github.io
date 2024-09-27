@@ -6,7 +6,9 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 :root {
     --background-color: #154063;
     --text-color: white;
-    --hover-color: #43688b
+    --hover-color: #43688b;
+    --dropdown-color: #f9f9f9;
+    --dropdown-hover-color: #e1e1e1;
 }
 
 #nav {
@@ -20,23 +22,36 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
     background-color: var(--background-color);
 }
 
+#nav #menu {
+    display: inline-block;
+    padding: 10px;
+}
+
+#nav #menu a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#nav #nav-menu:focus-within ul {
+    display: block;
+}
+
 #nav ul {
+    display: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    width: 25%;
+    background-color: var(--dropdown-color);
+    position: absolute;
+    height: 100vh;
+    z-index: 1;
 }
-
-#nav li {
-    float: left
-}
-
-#nav a {
-    display: inline-block;
-    color: var(--text-color);
-    font-weight: bolder;
-    text-align: center;
-    padding: 10px;
+  
+#nav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
     text-decoration: none;
 }
 
@@ -51,10 +66,14 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 #nav .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: var(--dropdown-color);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+
+#nav .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 #nav .dropdown-content a {
@@ -66,11 +85,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 }
 
 #nav .dropdown-content a:hover {
-    background-color: #e1e1e1;
-}
-
-#nav .dropdown:hover .dropdown-content {
-    display: block;
+    background-color: var(--dropdown-hover-color);
 }
 
 #nav #search {
@@ -78,7 +93,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
     position: absolute;
     float: right;
     top: 50%;
-    right: 25px;
+    right: 10px;
     transform: translate(0, -50%);
 }
 
@@ -88,4 +103,41 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 
 #nav #search:focus-within #search-results {
     display: block;
+
+@media screen and (min-width: 600px) {
+
+    #nav {
+        background-color: var(--background-color);
+    }
+
+    #nav #menu {
+        display: none;
+    }
+
+    #nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        display: block;
+        width: fit-content;
+        background-color: var(--background-color);
+        position: relative;
+        height: fit-content;
+        z-index: 0;
+    }
+    
+    #nav li {
+        float: left;
+    }
+    
+    #nav li a {
+        display: inline-block;
+        color: var(--text-color);
+        font-weight: bolder;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+    }
 }

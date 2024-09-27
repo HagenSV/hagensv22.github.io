@@ -37,6 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const nav = document.getElementById("nav")
 
     //Fill nav bar with links
+    const nav_menu = document.createElement("div")
+    nav_menu.id = "nav-menu";
+
+    const menu_btn = document.createElement("span")
+    menu_btn.id = "menu"
+    menu_btn.classList.add("material-icons")
+    menu_btn.appendChild(create_navbar_btn("menu","javascript:void(0)"))
+    nav_menu.appendChild(menu_btn)
+
     const nav_list = document.createElement("ul");
     for (const ITEM_NAME in NAVBAR_MENU) {
     
@@ -65,7 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         nav_list.appendChild(BTN);
     }
-    nav.appendChild(nav_list);
+    nav_menu.appendChild(nav_list);
+    nav.appendChild(nav_menu);
 
     // Create container for search functions
     const SEARCH_CONTAINER = document.createElement("div")
@@ -91,5 +101,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Add to nav bar
     nav.appendChild(SEARCH_CONTAINER);
-
 });

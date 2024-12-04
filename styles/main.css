@@ -1,0 +1,89 @@
+body {
+    background: #1a1a1a;
+    font-family: monospace;
+    color: white;
+}
+
+header {
+    padding: 25px;
+}
+
+main {
+    padding: 10px 20%;
+}
+
+.green {
+    background-color: green;
+}
+
+.green:hover {
+    background-color: darkgreen;
+    color: gainsboro
+}
+
+#nav {
+    padding-bottom: 50px
+}
+
+.heading {
+    width: fit-content;
+}
+
+.project {
+    padding: 20px 0;
+}
+
+.selected {
+    text-decoration: underline;
+    text-decoration-color: green;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+.type-cursor {
+    width: fit-content;
+    border-right: 0.1em solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        blink-cursor 1s step-end infinite;
+}
+
+.subheading {
+    color: #bfbfbf
+}
+
+.bold {
+    font-weight: bolder;
+    color: darkkhaki
+}
+
+.fade-in {
+    animation:
+            fade-in 0.65s linear,
+            slide-up 0.65s linear;
+        animation-fill-mode: backwards;
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

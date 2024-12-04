@@ -9,7 +9,7 @@ header {
 }
 
 main {
-    padding: 10px 20%;
+    padding: 10px 15%;
 }
 
 .green {
@@ -31,6 +31,10 @@ main {
 
 .project {
     padding: 20px 0;
+}
+
+.mobile-hidden {
+    display: none;
 }
 
 .selected {
@@ -85,5 +89,11 @@ main {
     }
     to {
         transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-hidden {
+        display: block;
     }
 }

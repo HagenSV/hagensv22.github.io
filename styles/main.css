@@ -1,3 +1,14 @@
+[data-bs-theme="dark"] {
+    --subheading-color: #bfbfbf;
+    --highlight-color: rgb(181, 173, 73);
+}
+
+[data-bs-theme="light"] {
+    --subheading-color: #7f7f7f;
+    --highlight-color: rgb(181, 173, 73);
+}
+
+
 body {
     font-family: monospace;
     font-size: 20px;
@@ -55,12 +66,12 @@ main {
 }
 
 .subheading {
-    color: #bfbfbf
+    color: var(--subheading-color)
 }
 
 .bold {
     font-weight: bolder;
-    color: darkkhaki
+    color: var(--highlight-color)
 }
 
 .fade-in {

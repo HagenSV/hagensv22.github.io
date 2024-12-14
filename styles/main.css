@@ -69,9 +69,18 @@ main {
         animation-fill-mode: backwards;
 }
 
+*:hover > .arrow-animate {
+    animation: arrow-animate 1s linear infinite;
+}
+
 @keyframes blink-cursor {
     from, to { border-color: transparent }
     50% { border-color: white; }
+}
+
+@keyframes arrow-animate {
+    from, to { padding-left: 0; }
+    50% { padding-left: 5px }
 }
 
 @keyframes fade-in {

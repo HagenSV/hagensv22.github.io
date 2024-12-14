@@ -1,7 +1,7 @@
 body {
-    background: #1a1a1a;
     font-family: monospace;
-    color: white;
+    font-size: 20px;
+    letter-spacing: 0.1rem;
 }
 
 header {
@@ -13,6 +13,7 @@ main {
 }
 
 .green {
+    color: white;
     background-color: darkgreen;
 }
 

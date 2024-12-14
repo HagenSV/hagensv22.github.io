@@ -13,11 +13,11 @@ main {
 }
 
 .green {
-    background-color: green;
+    background-color: darkgreen;
 }
 
 .green:hover {
-    background-color: darkgreen;
+    background-color: green;
     color: gainsboro
 }
 

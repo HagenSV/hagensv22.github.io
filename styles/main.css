@@ -1,9 +1,11 @@
 [data-bs-theme="dark"] {
+    --cursor-color: white;
     --subheading-color: #bfbfbf;
     --highlight-color: rgb(181, 173, 73);
 }
 
 [data-bs-theme="light"] {
+    --cursor-color: black;
     --subheading-color: #7f7f7f;
     --highlight-color: rgb(181, 173, 73);
 }
@@ -87,7 +89,7 @@ main {
 
 @keyframes blink-cursor {
     from, to { border-color: transparent }
-    50% { border-color: white; }
+    50% { border-color: var(--cursor-color); }
 }
 
 @keyframes arrow-animate {

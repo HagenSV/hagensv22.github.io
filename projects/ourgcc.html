@@ -1,7 +1,16 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
+        <script>
+            (() => {
+                //const theme = localStorage.getItem('theme')
+                const prefersLight = matchMedia('(prefers-color-scheme: light)').matches
+                if ( !prefersLight ) {
+                    document.documentElement.setAttribute("data-bs-theme","dark")
+                }
+            })()
+        </script>
     <!-- Google tag (gtag.js) -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QH8VCJ0N0"></script>
     <script>
@@ -29,7 +38,7 @@
     <link rel="stylesheet" href="/styles/main.css">
 
     </head>
-    <body data-bs-theme="dark">
+    <body>
     <header class="text-center">
     <h1>Samuel V. Hagen</h1>
     <p>Programmer for hire</p>

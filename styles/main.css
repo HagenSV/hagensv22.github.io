@@ -2,12 +2,14 @@
     --cursor-color: white;
     --subheading-color: #bfbfbf;
     --highlight-color: rgb(181, 173, 73);
+    --footer-background: #1b1f22;
 }
 
 [data-bs-theme="light"] {
     --cursor-color: black;
     --subheading-color: #7f7f7f;
     --highlight-color: rgb(181, 173, 73);
+    --footer-background: #f2f2f2;
 }
 
 
@@ -23,6 +25,12 @@ header {
 
 main {
     padding: 10px 15%;
+}
+
+footer {
+    padding: 10px;
+    font-size: 16px;
+    background: var(--footer-background)
 }
 
 .green {
